@@ -31,7 +31,7 @@ Passing these five (5) pieces of information into `spotipy.util.prompt_for_user_
 
 The **Client ID** and **Client Secret** must be generated from the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/login). Just log in and follow the instructions to create your app and generate your Client ID and Secret.
 
-Also in the Dashboard, you should whitelist a **redirect URI**, which is simply a URI to which Spotify will redirect your user after asking for permission on behalf of your app.
+Also in the Dashboard, you should whitelist a **redirect URI**, which is simply a URI to which Spotify will redirect your user after asking for permission on behalf of your app. This example uses "http://google.com".
 
 ## Reading the Data
 
