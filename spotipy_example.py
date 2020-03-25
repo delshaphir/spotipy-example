@@ -2,10 +2,11 @@ import sys
 
 import spotipy
 import spotipy.util as util
+import secrets
 
-SPOTIPY_CLIENT_ID = '08a6e5ca564848a982810348f1f635c4'
-SPOTIPY_CLIENT_SECRET = '3391d0d408a84bcb981cd09c32840d27'
-SPOTIPY_REDIRECT_URI = 'http://google.com'
+client_id = secrets.SPOTIPY_CLIENT_ID
+client_secret = secrets.SPOTIPY_CLIENT_SECRET
+redirect_uri = secrets.SPOTIPY_REDIRECT_URI
 
 DEFAULT_LIMIT = 20
 
@@ -16,7 +17,7 @@ class MenuOptionPayload:
 
 def get_token(username, scope):
     """Returns an authentication token, given a username and scope."""
-    return util.prompt_for_user_token(username, scope, SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET, SPOTIPY_REDIRECT_URI)
+    return util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 
 def new_menu(options):
     """
